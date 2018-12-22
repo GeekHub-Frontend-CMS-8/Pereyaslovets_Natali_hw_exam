@@ -1,0 +1,35 @@
+.design {
+  background-color: #fff;
+}
+
+.design-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 145px;
+}
+
+
+
+.design-container__text--paragraph {
+  color: #373737;
+  font-family: $font-text-book;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.8px;
+  padding-bottom: 50px;
+}
+
+.design-container__img--image {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .design-container__img--image {
+    display: block;
+  }
+  .design-container__img, .design-container__text {
+    flex-basis: 50%;
+  }
+}

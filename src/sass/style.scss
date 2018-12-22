@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Brandon Grotesque;
+  src: url(../fonts/GothamRoundedMedium_21022.ttf);
+}
+
+@font-face {
+  font-family: Brandon Grotesque;
+  src: url(../fonts/GothamRoundedBook_21018.ttf);
+}
+
+@mixin gallery-animation ($animation) {
+  -webkit-animation: anima $animation;
+  -moz-animation: anima $animation;
+  animation: anima $animation;
+}
+
+$font-text: 'Gotham Rounded', sans-serif;
+$font-text-book: 'Gotham Rounded Book', sans-serif;
+
+@mixin link-hover ($link-hover) {
+  -webkit-transition: $link-hover;
+  -moz-transition: $link-hover;
+  -o-transition: $link-hover;
+  transition: $link-hover;
+}
+
+@mixin menu-hover ($link-hover) {
+  -webkit-transition: $link-hover;
+  -o-transition: $link-hover;
+  transition: $link-hover;
+}
+
+.wrap {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 450px)  {
+  .wrap {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 480px)  {
+  .wrap {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px)  {
+  .wrap {
+    width: 740px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px)  {
+  .wrap {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .wrap {
+    width: 1040px;
+    margin: 0 auto;
+  }
+}
+
+@import "../../node_modules/reset-css/sass/reset";
+@import "header";
+@import "simple";
+@import "design";
+@import "gallery";
+@import "subscribe";
+@import "download";
+@import "footer";

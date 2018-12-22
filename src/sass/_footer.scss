@@ -1,0 +1,40 @@
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 0 35px 0;
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    flex-direction: row;
+  }
+}
+
+.copyright-text__about {
+  color: #373737;
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.1px;
+}
+
+.copyright-text__copy {
+  color: #373737;
+  font-family: $font-text;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.1px;
+}
+
+.copyright-text {
+  margin-bottom: 35px;
+}
+
+@media (min-width: 768px) {
+  .copyright-text {
+    margin-bottom: 0;
+  }
+}

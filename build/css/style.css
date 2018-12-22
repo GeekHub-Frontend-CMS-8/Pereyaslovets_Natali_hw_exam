@@ -1,0 +1,696 @@
+* {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: Brandon Grotesque;
+  src: url(../fonts/GothamRoundedMedium_21022.ttf); }
+
+@font-face {
+  font-family: Brandon Grotesque;
+  src: url(../fonts/GothamRoundedBook_21018.ttf); }
+
+.wrap {
+  width: 280px;
+  margin: 0 auto; }
+
+@media screen and (min-width: 450px) {
+  .wrap {
+    width: 400px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 480px) {
+  .wrap {
+    width: 450px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 768px) {
+  .wrap {
+    width: 740px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 1024px) {
+  .wrap {
+    width: 1000px;
+    margin: 0 auto; } }
+
+@media screen and (min-width: 1050px) {
+  .wrap {
+    width: 1040px;
+    margin: 0 auto; } }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v4.0 | 20180602
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.header {
+  background: url("../img/header_bg.png") center/cover no-repeat;
+  text-align: center; }
+
+h1 {
+  color: #fff;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5.4px;
+  padding: 100px 0 15px 0; }
+
+@media (min-width: 990px) {
+  h1 {
+    padding-bottom: 15px; } }
+
+.container-text {
+  color: #ffffff;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2.4px;
+  padding-bottom: 25px; }
+
+.menu-list__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 0 250px 0; }
+
+.menu-list__link {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.4px; }
+
+.btn-start {
+  color: #fff;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  border-radius: 3px;
+  background-color: #16a085;
+  border: 1px solid #16a085;
+  padding: 20px 30px;
+  margin-bottom: 220px; }
+
+.soc-icon {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 25px; }
+
+.soc-icon__list a {
+  color: #fff;
+  font-size: 23px;
+  padding-right: 15px; }
+
+.link {
+  font: 400 18px/1 "Gotham Rounded", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  line-height: 60px; }
+  .link:hover {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    opacity: .7; }
+
+@media (min-width: 990px) {
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center; } }
+
+.menu-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding-left: 0; }
+
+.menu-list__item {
+  margin-right: 25px; }
+
+.menu-list__item:last-child {
+  margin-right: 0; }
+
+@media only screen and (max-width: 992px) {
+  .menu-list {
+    position: fixed;
+    padding: 100px 0 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 72%;
+    height: 120%;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    z-index: 1;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    will-change: auto; }
+    .menu-list.open {
+      opacity: 1;
+      visibility: visible;
+      height: 120%;
+      background: #fff;
+      -webkit-box-shadow: 0 0 80px 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 80px 20px rgba(0, 0, 0, 0.5);
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+      transform: translateX(0); }
+    .menu-list.open li {
+      -webkit-animation: fadeInRight .5s ease forwards;
+      animation: fadeInRight .5s ease forwards;
+      -webkit-animation-delay: .35s;
+      animation-delay: .35s; }
+    .menu-list.open li:nth-of-type(2) {
+      -webkit-animation-delay: .4s;
+      animation-delay: .4s; }
+    .menu-list.open li:nth-of-type(3) {
+      -webkit-animation-delay: .5s;
+      animation-delay: .5s; }
+    .menu-list.open li:nth-of-type(4) {
+      -webkit-animation-delay: .6s;
+      animation-delay: .6s; }
+    .menu-list.open li:nth-of-type(5) {
+      -webkit-animation-delay: .7s;
+      animation-delay: .7s; }
+    .menu-list.open li:nth-of-type(6) {
+      -webkit-animation-delay: .8s;
+      animation-delay: .8s; }
+    .menu-list.open li:nth-of-type(7) {
+      -webkit-animation-delay: .9s;
+      animation-delay: .9s; }
+  .menu-list__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .menu-list__item {
+    display: block;
+    opacity: 0;
+    padding-right: 0;
+    text-align: left; }
+  .menu-list__link {
+    display: block;
+    width: 100%;
+    padding: 0 0 0 50px;
+    height: 85px;
+    border-bottom: 0;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    background: none;
+    color: #58595b;
+    font: 500 30px/85px "Gotham Rounded", sans-serif; }
+  .menu-list:hover a {
+    border-bottom: 0;
+    -webkit-tap-highlight-color: rgba(78, 136, 251, 0.6);
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation; }
+  @-webkit-keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%; }
+    100% {
+      opacity: 1;
+      left: 0; } }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      left: 20%; }
+    100% {
+      opacity: 1;
+      left: 0; } } }
+
+@media only screen and (max-width: 600px) {
+  .menu-list__link {
+    height: 50px;
+    font: 500 20px/50px "Gotham Rounded", sans-serif; } }
+
+@media only screen and (max-width: 992px) {
+  .topnav {
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 10;
+    -webkit-transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    -o-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease; }
+  .topnav__item {
+    position: absolute;
+    top: 18px;
+    left: 15px;
+    border: 0;
+    height: 5px;
+    width: 50px;
+    background: #f2f2f2;
+    cursor: pointer; }
+  .topnav__item:nth-of-type(2) {
+    top: 33px; }
+  .topnav__item:nth-of-type(3) {
+    top: 48px; }
+  .topnav.active {
+    opacity: 1;
+    z-index: 100; }
+  .topnav.active .topnav__item {
+    background: #58595b;
+    border: 0;
+    height: 5px;
+    width: 55px;
+    border-radius: 0; }
+  .topnav.active .topnav__item--top {
+    -webkit-transform: translateY(19px) translateX(-13px) rotate(135deg);
+    -ms-transform: translateY(19px) translateX(-13px) rotate(135deg);
+    transform: translateY(19px) translateX(-13px) rotate(135deg);
+    background: #58595b;
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s; }
+  .topnav.active .topnav__item--middle {
+    opacity: 0;
+    background: #58595b;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%; }
+  .topnav.active .topnav__item--bottom {
+    -webkit-transform: translateY(-11px) translateX(-13px) rotate(-135deg);
+    -ms-transform: translateY(-11px) translateX(-13px) rotate(-135deg);
+    transform: translateY(-11px) translateX(-13px) rotate(-135deg);
+    background: #58595b;
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s; } }
+
+@media only screen and (max-width: 600px) {
+  .topnav {
+    position: absolute;
+    top: 11px;
+    right: 14px;
+    width: 60px;
+    height: 60px; }
+    .topnav__item {
+      position: absolute;
+      top: 18px;
+      left: 15px;
+      height: 3px;
+      width: 45px; }
+  .topnav.active .topnav__item {
+    height: 3px;
+    width: 45px; } }
+
+.simple-photo {
+  background-color: #f5f6f7; }
+
+h2 {
+  color: #16a085;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  padding-bottom: 50px; }
+
+.photo-text__text {
+  color: #373737;
+  font-family: "Gotham Rounded Book", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.8px;
+  padding-bottom: 50px; }
+
+.block-photo {
+  padding: 110px 0 90px 0;
+  display: flex;
+  flex-direction: row; }
+
+.photo-text_button {
+  color: #fff;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  border-radius: 3px;
+  background-color: #16a085;
+  border: 1px solid #16a085;
+  padding: 20px 30px; }
+
+@media (min-width: 768px) {
+  .photo-bg, .photo-text {
+    flex-basis: 50%; } }
+
+.design {
+  background-color: #fff; }
+
+.design-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 145px; }
+
+.design-container__text--paragraph {
+  color: #373737;
+  font-family: "Gotham Rounded Book", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.8px;
+  padding-bottom: 50px; }
+
+.design-container__img--image {
+  display: none; }
+
+@media (min-width: 768px) {
+  .design-container__img--image {
+    display: block; }
+  .design-container__img, .design-container__text {
+    flex-basis: 50%; } }
+
+.gallery {
+  background-color: #f5f6f7;
+  padding: 120px 0; }
+
+.gallery-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+@media screen and (min-width: 768px) {
+  .gallery-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; } }
+
+@media screen and (min-width: 1024px) {
+  .gallery-list {
+    flex-wrap: nowrap; } }
+
+.gallery-list__item--thumb {
+  width: 280px; }
+
+@media screen and (min-width: 768px) {
+  .gallery-list__item--thumb {
+    width: 100%; } }
+
+.gallery-list__item--text {
+  position: relative;
+  background: #eee;
+  border: 1px solid #7d9185;
+  padding: 20px;
+  color: #727272;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase; }
+
+.gallery-list__item--img {
+  position: relative;
+  -webkit-animation: anima anima 2s;
+  -moz-animation: anima anima 2s;
+  animation: anima anima 2s;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  margin-bottom: 20px; }
+
+@media screen and (min-width: 768px) {
+  .gallery-list__item--img {
+    margin-right: 25px; } }
+
+.gallery-list__item--text:after, .gallery-list__item--text:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none; }
+
+.gallery-list__item--text:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #eee;
+  border-width: 18px;
+  left: 50%;
+  margin-left: -18px; }
+
+.gallery-list__item--text:before {
+  border-color: rgba(125, 145, 133, 0);
+  border-bottom-color: #eee;
+  border-width: 19px;
+  left: 50%;
+  margin-left: -19px; }
+
+.thumb-caption {
+  cursor: default;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 62, 80, 0.7);
+  padding: 100px 10px;
+  text-align: center;
+  -ms-filter: "alpha(opacity=($opacity * 100))";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0; }
+
+.gallery-list__item--img:hover .thumb-image {
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+.thumb-title {
+  font-size: 1.8em; }
+
+a:hover, .gallery-list__item--img .gallery-img-image, .thumb-caption, .gallery-list__item--thumb:hover .thumb-caption, .gallery-list__item--thumb:hover img {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.gallery-list__item--img:hover .bottom-to-top {
+  -ms-filter: "alpha(opacity=($opacity * 100))";
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1; }
+
+.bottom-to-top {
+  top: 50%;
+  left: 0; }
+
+.gallery-list__item--img:hover .bottom-to-top {
+  top: 0;
+  left: 0; }
+
+.subscribe {
+  background: url("../img/subscribe_bg.png") center/cover no-repeat;
+  text-align: center;
+  padding: 350px 0 320px 0; }
+
+.subscribe-text {
+  color: #ffffff;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  padding-bottom: 35px; }
+
+.subscribe-form {
+  display: flex;
+  justify-content: center; }
+  .subscribe-form__mail {
+    color: #373737;
+    font-family: "Gotham Rounded", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    padding: 20px; }
+
+.fa-linkedin-in {
+  color: #fff;
+  display: block;
+  border-radius: 0 3px 3px 0;
+  background-color: #16a085;
+  padding: 20px; }
+
+.download {
+  background-color: #f5f6f7;
+  text-align: center;
+  padding: 90px 0 110px 0; }
+
+h3 {
+  color: #373737;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: 15px; }
+
+.download-text {
+  color: #373737;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  padding-bottom: 45px; }
+
+.download-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+@media screen and (min-width: 450px) {
+  .download-list {
+    flex-direction: row; } }
+
+.download-list__item {
+  display: flex;
+  flex-direction: row;
+  border-radius: 3px 0 0 3px;
+  background-color: #1abc9c;
+  margin-bottom: 25px; }
+
+@media screen and (min-width: 768px) {
+  .download-list__item {
+    margin-right: 25px; } }
+
+.download-list__link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  padding: 25px 40px; }
+
+.fa-apple, .fa-android {
+  color: #fff;
+  display: block;
+  border-radius: 0 3px 3px 0;
+  background-color: #16a085;
+  padding: 25px 40px; }
+
+@media screen and (min-width: 768px) {
+  .fa-apple, .fa-android {
+    color: #fff;
+    display: block;
+    border-radius: 0 3px 3px 0;
+    background-color: #16a085;
+    padding: 25px 20px; } }
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px 0 35px 0; }
+
+@media (min-width: 768px) {
+  .copyright {
+    flex-direction: row; } }
+
+.copyright-text__about {
+  color: #373737;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.1px; }
+
+.copyright-text__copy {
+  color: #373737;
+  font-family: "Gotham Rounded", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2.1px; }
+
+.copyright-text {
+  margin-bottom: 35px; }
+
+@media (min-width: 768px) {
+  .copyright-text {
+    margin-bottom: 0; } }

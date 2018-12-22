@@ -1,0 +1,82 @@
+.download {
+  background-color: #f5f6f7;
+  text-align: center;
+  padding: 90px 0 110px 0;
+}
+
+h3 {
+  color: #373737;
+  font-family: $font-text;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: 15px;
+}
+
+.download-text {
+  color: #373737;
+  font-family: $font-text;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  padding-bottom: 45px;
+}
+
+.download-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (min-width: 450px)  {
+  .download-list {
+    flex-direction: row;
+  }
+}
+
+.download-list__item {
+  display: flex;
+  flex-direction: row;
+  border-radius: 3px 0 0 3px;
+  background-color: #1abc9c;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px)  {
+  .download-list__item {
+    margin-right: 25px;
+  }
+}
+
+.download-list__link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-family: $font-text;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  padding: 25px 40px;
+}
+
+.fa-apple, .fa-android {
+  color: #fff;
+  display: block;
+  border-radius: 0 3px 3px 0;
+  background-color: #16a085;
+  padding: 25px 40px;
+}
+
+@media screen and (min-width: 768px)  {
+  .fa-apple, .fa-android {
+    color: #fff;
+    display: block;
+    border-radius: 0 3px 3px 0;
+    background-color: #16a085;
+    padding: 25px 20px;
+  }
+}
